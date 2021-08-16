@@ -20,7 +20,7 @@ pipeline {
             steps { 
                 script {
                     
-                    docker login -u anupbpote -p @Nup_2499
+                    docker login --username anupbpote --pasword_stdin @Nup_2499
                     dockerImage = docker.build registry + ":$BUILD_NUMBER" 
 
                 }
