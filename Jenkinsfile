@@ -9,10 +9,10 @@ pipeline {
 
     agent any 
     stages { 
-        stage('Cloning our Git') { 
+        stage('Git Checkout') { 
             steps {
 
-                git 'https://github.com/Anup02499/jenkins5.git' 
+                checkout scm
             }
         } 
 
