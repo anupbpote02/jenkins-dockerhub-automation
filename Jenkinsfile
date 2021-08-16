@@ -18,12 +18,12 @@ pipeline {
 
         stage('Building our image') { 
             steps { 
-                script {
+                
                     
-                    docker login --username anupbpote --password-stdin @Nup_2499
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER" 
+                   sh 'docker login --username anupbpote --password-stdin @Nup_2499'
+                   sh 'dockerImage = docker.build registry + ":$BUILD_NUMBER" '
 
-                }
+            
 
             } 
         }
